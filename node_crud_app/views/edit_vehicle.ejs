@@ -1,0 +1,107 @@
+<%- include('layout/header') %>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white text-center">
+          <h3>Edit Vehicle Details</h3>
+        </div>
+        <div class="card-body">
+          <form action="/edit/<%= vehicle._id %>" method="POST" enctype="multipart/form-data">
+            <!-- Name -->
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Enter vehicle name"
+                value="<%= vehicle.name %>"
+                required
+              />
+            </div>
+            <!-- Car -->
+            <div class="mb-3">
+              <label for="car" class="form-label">Car</label>
+              <input
+                type="text"
+                class="form-control"
+                id="car"
+                name="car"
+                placeholder="Enter car model"
+                value="<%= vehicle.car %>"
+                required
+              />
+            </div>
+            <!-- Rent -->
+            <div class="mb-3">
+              <label for="rent" class="form-label">Rent Per Day</label>
+              <input
+                type="number"
+                class="form-control"
+                id="rent"
+                name="rent"
+                placeholder="Enter rent price per day"
+                value="<%= vehicle.rent %>"
+                required
+              />
+            </div>
+            <!-- Capacity -->
+            <div class="mb-3">
+              <label for="capacity" class="form-label">Seating Capacity</label>
+              <input
+                type="number"
+                class="form-control"
+                id="capacity"
+                name="capacity"
+                placeholder="Enter seating capacity"
+                value="<%= vehicle.capacity %>"
+                required
+              />
+            </div>
+            <!-- Status -->
+            <div class="mb-3">
+              <label for="status" class="form-label">Vehicle Status</label>
+              <select class="form-control" id="status" name="status" required>
+                <option value="available" <%= vehicle.status === 'available' ? 'selected' : '' %>>Available</option>
+                <option value="unavailable" <%= vehicle.status === 'unavailable' ? 'selected' : '' %>>Unavailable</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="option" class="form-label">Vehicle option</label>
+              <select class="form-control" id="option" name="option" required>
+                
+              
+            <option value="withdriver" <%= vehicle.option === 'withdriver' ? 'selected' : '' %>>withdriver</option>
+            <option value="selfdrive" <%= vehicle.option === 'selfdrive' ? 'selected' : '' %>selfdrive</option>
+              </select>
+
+            </div>
+            <!-- Image -->
+            <div class="mb-3">
+              <label for="image" class="form-label">Upload New Image (Optional)</label>
+              <input
+                type="file"
+                class="form-control"
+                id="image"
+                name="image"
+                accept="image/*"
+              />
+              <div class="mt-3">
+                <!-- Show the current image if available -->
+                <label>Current Image</label><br>
+                <img src="/uploads/<%= vehicle.image %>" alt="<%= vehicle.name %>" style="width: 100px; height: auto;" />
+              </div>
+            </div>
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary w-100">Update Vehicle</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('layout/footer') %>

@@ -1,0 +1,82 @@
+<%- include('layout/header') %>
+
+<div class="container">
+  <div class="row my-5">
+    <div class="col-lg-12">
+      <h1>Admin Dashboard - Vehicle Database</h1>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>ID</th>
+              <th>Name</th>
+              <th>model</th>
+              <th>Rent</th>
+              <th>Capacity</th>
+              <th>vehicle type</th>
+              <th>Status</th>
+              <th>drive options</th>  <!-- Added Status column -->
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if (vehicles.length > 0) { %>
+              <% vehicles.forEach((vehicle, index) => { %>
+                <tr>
+                  <!-- Display the vehicle image -->
+                  <td>
+                    <img
+                      src="/uploads/<%= vehicle.image %>"
+                      alt="<%= vehicle.name %>"
+                      style="width: 100px; height: auto;"
+                    />
+                  </td>
+                  <!-- Display other vehicle details -->
+                  <td><%= index + 1 %></td>
+                  <td><%= vehicle.name %></td>
+                  <td><%= vehicle.car %></td>
+                  <td><%= vehicle.rent %></td>
+                  <td><%= vehicle.capacity %></td>
+                  <td>
+                    <span class="<%= vehicle.variant === 'car' ? 'text-success' : 'text-danger' %>">
+                      <%= vehicle.variant.charAt(0).toUpperCase() + vehicle.variant.slice(1) %>
+                    </span>
+                  </td>
+                  <!-- Display the status of the vehicle -->
+                  <td>
+                    <span class="<%= vehicle.status === 'available' ? 'text-success' : 'text-danger' %>">
+                      <%= vehicle.status.charAt(0).toUpperCase() + vehicle.status.slice(1) %>
+                    </span>
+                  </td>
+                  <td>
+                    <span class="<%= vehicle.option === 'selfdrive' ? 'text-success' : 'text-danger' %>">
+                      <%= vehicle.option.charAt(0).toUpperCase() + vehicle.option.slice(1) %>
+                    </span>
+                  </td>
+
+                  <!-- Action buttons for edit/delete -->
+                  <td>
+                    <a href="/edit/<%= vehicle._id %>" class="text-success">
+                      <i class="fas fa-edit fa-lg mx-1"></i>
+                    </a>
+                    <a href="/delete/<%= vehicle._id %>" class="text-danger">
+                      <i class="fas fa-trash fa-lg mx-1"></i>
+                    </a>
+                  </td>
+                </tr>
+              <% }); %>
+            <% } else { %>
+              <tr>
+                <td colspan="8" class="text-center">No vehicles found</td>
+              </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('layout/footer') %>
+
