@@ -1,0 +1,77 @@
+<%- include('layout/header') %>
+
+<div class="container my-5">
+  <h1 class="text-center">Search Results for "<%= query %>"</h1>
+
+  <!-- User Search Results -->
+  <div class="mt-4">
+    <h3>Users</h3>
+    <% if (users.length > 0) { %>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Password</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach(user => { %>
+            <tr>
+              <td><%= user.name %></td>
+              <td><%= user.email %></td>
+              <td><%= user.phone %></td>
+              <td><%= user.password %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <p>No users found.</p>
+    <% } %>
+  </div>
+
+  <!-- Vehicle Search Results -->
+  <div class="mt-4">
+    <h3>Vehicles</h3>
+    <% if (vehicles.length > 0) { %>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Car</th>
+            <th>Rent</th>
+            <th>Capacity</th>
+            <th>Status</th>
+            <th>Option</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% vehicles.forEach(vehicle => { %>
+            <tr>
+              <td><%= vehicle.name %></td>
+              <td><%= vehicle.car %></td>
+              <td><%= vehicle.rent %></td>
+              <td><%= vehicle.capacity %></td>
+              <td><%= vehicle.status %></td>
+              <td><%= vehicle.option %></td>
+              <td>
+                <% if (vehicle.image) { %>
+                  <img src="/uploads/<%= vehicle.image %>" alt="Vehicle Image" width="50">
+                <% } else { %>
+                  No Image
+                <% } %>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <p>No vehicles found.</p>
+    <% } %>
+  </div>
+</div>
+
+<%- include('layout/footer') %>

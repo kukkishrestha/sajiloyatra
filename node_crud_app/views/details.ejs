@@ -1,0 +1,105 @@
+<%- include('layout/header') %>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white text-center">
+          <h3>Add Vehicle Details</h3>
+        </div>
+        <div class="card-body">
+          <form action="/details" method="POST" enctype="multipart/form-data">
+            <!-- Name -->
+            <div class="mb-3">
+              <label for="name" class="form-label"> vehicle Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Enter vehicle name"
+                required
+              />
+            </div>
+            <!-- Car -->
+            <div class="mb-3">
+              <label for="car" class="form-label">model</label>
+              <input
+                type="text"
+                class="form-control"
+                id="car"
+                name="car"
+                placeholder="Enter car model"
+                required
+              />
+            </div>
+            <!-- Rent -->
+            <div class="mb-3">
+              <label for="rent" class="form-label">Rent Per Day</label>
+              <input
+                type="number"
+                class="form-control"
+                id="rent"
+                name="rent"
+                placeholder="Enter rent price per day"
+                required
+              />
+            </div>
+            <!-- Capacity -->
+            <div class="mb-3">
+              <label for="capacity" class="form-label">Seating Capacity</label>
+              <input
+                type="number"
+                class="form-control"
+                id="capacity"
+                name="capacity"
+                placeholder="Enter seating capacity"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="variant" class="form-label">Vehicle type</label>
+              <select class="form-control" id="variant" name="variant" required>
+                <option value="car">car</option>
+                <option value="bike">bike</option>
+                <option value="scuter">scuter</option>
+                <option value="evcar">evcar</option>
+              </select>
+            </div>
+            <!-- Status -->
+            <div class="mb-3">
+              <label for="status" class="form-label">Vehicle Status</label>
+              <select class="form-control" id="status" name="status" required>
+                <option value="available">Available</option>
+                <option value="unavailable">Unavailable</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="status" class="form-label">drive options</label>
+              <select class="form-control" id="option" name="opton" required>
+                <option value="selfdrive">self drive</option>
+                <option value="withdriver">with driver</option>
+              </select>
+            </div>
+            <!-- Image -->
+            <div class="mb-3">
+              <label for="image" class="form-label">Upload Image</label>
+              <input
+                type="file"
+                class="form-control"
+                id="image"
+                name="image"
+                accept="image/*"
+                required
+              />
+            </div>
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('layout/footer') %>
