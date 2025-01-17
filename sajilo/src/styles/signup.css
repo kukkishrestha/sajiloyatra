@@ -1,0 +1,111 @@
+/* Container styling */
+.container.signup-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff; /* Pure white background for modern look */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Heading styling */
+.container.signup-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Form layout */
+.container.signup-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Consistent spacing between elements */
+}
+
+/* Form fields container */
+.container.signup-container form div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.container.signup-container form label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Input fields */
+.container.signup-container form input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+/* Input field hover and focus effects */
+.container.signup-container form input:hover,
+.container.signup-container form input:focus {
+    border-color: #007bff;
+    background-color: #f9faff; /* Light blue background for focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Button styling */
+.container.signup-container form button {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.container.signup-container form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.03); /* Slight zoom effect */
+}
+
+/* Link section */
+.container.signup-container form span {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container.signup-container form span a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container.signup-container form span a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+    .container.signup-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .container.signup-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .container.signup-container form button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

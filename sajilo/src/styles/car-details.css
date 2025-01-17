@@ -1,0 +1,132 @@
+/* car-details.css */
+
+/* Overall container for car details */
+.car-details {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff5f7;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Hover effect for the entire card */
+  .car-details:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Styling for car image section */
+  .car-details__img {
+    text-align: center;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  .car-details__img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .car-details__img img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Header for car name */
+  .car-details h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ff6f61;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100%;
+    text-transform: capitalize;
+  }
+  
+  /* General paragraph styling for car details */
+  .car-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+  }
+  
+  /* Status text with cute color */
+  .car-details p:nth-child(3) {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #32cd32;
+  }
+  
+  /* Capacity text with a cute blue color */
+  .car-details p:nth-child(4) {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #87cefa;
+  }
+  
+  /* Rent amount with an inviting yellow-orange color */
+  .car-details p:nth-child(5) {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #f39c12;
+    text-transform: uppercase;
+  }
+  
+  /* Styling for the car description */
+  .car-details p:last-child {
+    font-size: 1.1rem;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Loading text styling */
+  .car-details p.loading {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ff6347;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  
+  /* Responsive design for mobile devices */
+  @media (max-width: 768px) {
+    .car-details {
+      padding: 15px;
+      margin: 20px;
+    }
+  
+    .car-details h2 {
+      font-size: 1.8rem;
+    }
+  
+    .car-details p {
+      font-size: 0.95rem;
+    }
+  
+    /* Making sure description text is equally distributed */
+    .car-details p:last-child {
+      font-size: 1rem;
+      padding: 0 15px;
+    }
+  }
+  

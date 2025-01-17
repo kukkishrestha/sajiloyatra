@@ -1,0 +1,82 @@
+.update-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;             /* White text */
+    border: none;             /* Remove default border */
+    padding: 10px 20px;       /* Add padding */
+    text-align: center;       /* Center text */
+    text-decoration: none;    /* Remove underline */
+    display: inline-block;    /* Inline-block display */
+    font-size: 16px;          /* Increase font size */
+    margin: 4px 2px;          /* Small margin */
+    cursor: pointer;          /* Pointer cursor on hover */
+    border-radius: 5px;       /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .update-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+
+  
+  /* Scoped styles for the Update component */
+.update-container {
+    max-width: 600px;
+    margin: 50px auto; /* Center the form on the page */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    font-family: Arial, sans-serif;
+  }
+  
+  .update-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .update-field {
+    margin-bottom: 15px;
+  }
+  
+  .update-field label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .update-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .update-field input:disabled {
+    background-color: #e9e9e9;
+    cursor: not-allowed;
+  }
+  
+  .update-button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%; /* Make the button full-width */
+  }
+  
+  .update-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+
+  

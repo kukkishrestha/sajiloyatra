@@ -1,0 +1,129 @@
+/* Container styling */
+.booking-form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+}
+
+/* Heading styling */
+.booking-form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Paragraph styling */
+.booking-form-container p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Label styling */
+.booking-form-container label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Input field styling */
+.booking-form-container input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+.booking-form-container input[type="date"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Total price styling */
+.booking-form-container .total-price {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+}
+
+/* Button styling */
+.booking-form-container button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.booking-form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .booking-form-container {
+    padding: 15px;
+  }
+
+  .booking-form-container h1 {
+    font-size: 20px;
+  }
+
+  .booking-form-container p {
+    font-size: 14px;
+  }
+
+  .booking-form-container input[type="date"] {
+    font-size: 13px;
+  }
+
+  .booking-form-container button {
+    font-size: 14px;
+  }
+}
+
+
+.rental-criteria {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.rental-criteria h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.rental-criteria ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.rental-criteria li {
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}

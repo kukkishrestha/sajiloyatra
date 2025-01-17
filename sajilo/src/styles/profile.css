@@ -1,0 +1,92 @@
+/* Overall page styling */
+.profile-container {
+    background: linear-gradient(145deg, #000d6b, #3f56a1); /* Gradient background */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 480px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Deepened shadow */
+}
+
+/* Profile heading */
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Profile paragraph (email or other details) */
+p {
+    font-size: 1.2rem;
+    color: #f4f4f4; /* Lighter text color for better contrast */
+    margin-top: 0;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Profile image styling */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 4px solid #fff; /* White border around image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cancel Button */
+.cancel-button {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.cancel-button:hover {
+    background-color: #e60000; /* Darker red */
+    transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .profile-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .cancel-button {
+        font-size: 1rem;
+    }
+}
+
